@@ -1,0 +1,46 @@
+# bind escape key
+escape C-w
+
+# start new shell with command-n instead
+unbind c
+
+# bind nextscreen
+bind o nextscreen
+
+# manipulate system clipboard
+bind y exec $RATPOISON -c getsel | pbcopy
+
+# for some reason hsplit and vsplit behaviour is swapped
+unbind v
+bind v exec $RATPOISON -c hsplit
+
+alias term exec urxvt
+
+#set padding -2 -23 -2 -4
+set padding -2 -26 -2 -4
+
+# appearance of ratpoison status messages and input line
+set bgcolor #096EE9
+set fgcolor grey95
+set font 6x12
+set inputwidth 1387
+set bargravity ne
+set barpadding 4 4
+msgwait 5
+startup_message off
+
+# hook to display list of windows when switching
+addhook switchwin windows
+
+# some stuff that will be able to be displayed
+bind a exec $RATPOISON -c "echo `date +%Y%m%d`"
+
+# removing default keybindings for exchanging frames to stop from clashing with spaces
+unbind C-Left
+unbind C-Right
+unbind C-Up
+unbind C-Down
+bind End exchangeright
+bind Prior exchangeup
+bind Next exchangedown
+bind Home exchangeleft
