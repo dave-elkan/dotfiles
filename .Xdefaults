@@ -29,9 +29,9 @@ URxvt.secondaryScroll:  true
 URxvt.secondaryScreen:  true
 
 # This is for my 30"
-# URxvt.geometry:	150x80
+URxvt.geometry:	150x80
 # This is for my laptop's 17"
-URxvt.geometry:		150x40
+#URxvt.geometry:		150x40
 
 # To stop xterm from starting up with X11.app type the following:
 # defaults write org.x.X11 app_to_run /opt/local/bin/urxvt

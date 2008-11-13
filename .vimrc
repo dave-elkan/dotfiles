@@ -20,8 +20,6 @@ if !has("gui_running")
 	colorscheme desert
 endif
 filetype on
-"clears search buffer
-nnoremap <silent> <F3> :let @/=""<CR>
 set wildmode=longest,list
 set background=dark
 set hlsearch
@@ -30,13 +28,9 @@ set nocompatible
 set ignorecase
 set smartcase
 set incsearch
-" set scrolloff=2
 set nowrap
-"horizontal scrollbar
-"set guioptions+=b
 set wrap
 set showmatch
-"not working with macvim
 set ruler
 set shiftwidth=4
 set tabstop=4
@@ -46,9 +40,18 @@ set noerrorbells
 set backspace=start,indent,eol
 syntax on
 set spelllang=en_au
+set title
+set hidden
 " restore size of vim window when restoring session
 set sessionoptions+=resize
 set textwidth=110
+set history=1000
+runtime macros/matchit.vim
+
+" catch trailing whitespace
+set listchars=tab:>-,trail:·,eol:$
+nmap <silent> <leader>s :set nolist!<CR>
+
 " titeInhibit, allows vim contents to be available on screen after exit
 " set t_ti= t_te=
 
@@ -83,7 +86,8 @@ nmap <F2> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 imap <F2> <ESC>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 
 nmap <F3> :let @/=""<CR>
-nmap <F4> :Drill<CR>
+map <F4> :FuzzyFinderTextMate<CR>
+map <F5> :ruby finder.rescan!<CR>
 
 " TVO
 let otl_map_tabs = 1
@@ -93,3 +97,9 @@ au BufLeave,BufUnload *.otl		set tw=0 | set ts=4 | set sw=4 | set foldlevel=0 | 
 " A - header switching plugin
 let g:alternateExtensions_m = "h"
 let g:alternateExtensions_h = "m"
+
+" FuzzyFinderTextMate
+let g:fuzzy_roots = ['/Volumes/www/', '/Users/Basil/dotfiles/', '/Users/Basil/.vim/secure/']
+
+" VimWiki
+let g:vimwiki_home = '$HOME/.vim/wiki/'

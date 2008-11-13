@@ -24,3 +24,4 @@ fi
 
 # aliases
 alias sshom='ssh bshkara_om@ssh.phx.nearlyfreespeech.net'
+alias ssharmin='ssh basil@armin'
