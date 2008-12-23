@@ -8,9 +8,9 @@ if has("gui_running")
 	" position
 	"winp 0 0
 	" width/height
-	set lines=66
-	set columns=153
-	set guifont=Monaco:h16
+	set lines=80
+	set columns=200
+	set guifont=Monaco:h13
 	set guioptions-=T
 	set fuoptions=maxvert,maxhorz
 	set cursorline
@@ -41,11 +41,13 @@ set backspace=start,indent,eol
 syntax on
 set spelllang=en_au
 set title
+set ttyfast
 set hidden
 " restore size of vim window when restoring session
 set sessionoptions+=resize
-set textwidth=110
+"set textwidth=110
 set history=1000
+set t_Co=256
 runtime macros/matchit.vim
 
 " catch trailing whitespace
@@ -79,13 +81,14 @@ filetype indent on
 filetype plugin on
 
 " copy to system clipboard, if in visual mode grab selected, otherwise grab just the current line
-nmap <F1> :.w !pbcopy<CR><CR>
-vmap <F1> :w !pbcopy<CR><CR>
-" paste contents from system clipboard
-nmap <F2> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
-imap <F2> <ESC>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+"map <F1> :.w !pbcopy<CR><CR>
+"map <F1> :w !pbcopy<CR><CR>
+"" paste contents from system clipboard
+"map <F2> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
+"map <F2> <ESC>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 
-nmap <F3> :let @/=""<CR>
+map <F2> :!python -m py_compile %<CR>
+map <F3> :let @/=""<CR>
 map <F4> :FuzzyFinderTextMate<CR>
 map <F5> :ruby finder.rescan!<CR>
 
@@ -99,7 +102,7 @@ let g:alternateExtensions_m = "h"
 let g:alternateExtensions_h = "m"
 
 " FuzzyFinderTextMate
-let g:fuzzy_roots = ['/Volumes/www/', '/Users/Basil/dotfiles/', '/Users/Basil/.vim/secure/']
+let g:fuzzy_roots = ['/Volumes/www/', '/Users/Basil/dotfiles/', '/Users/Basil/.vim/secure/', '/Users/Basil/Development/iphone/Property Machine/']
 
 " VimWiki
 let g:vimwiki_home = '$HOME/.vim/wiki/'

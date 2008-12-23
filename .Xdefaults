@@ -1,7 +1,7 @@
 URxvt.cursorBlink: true
 URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=14
 URxvt.boldFont: xft:Bitstream Vera Sans Mono:pixelsize=14:style=Bold
-URxvt.termName: rxvt
+URxvt.termName: xterm-256color
 URxvt.perl-ext-common: default,tabbed
 URxvt.tabbed.tabbar-fg: 60
 URxvt.tabbed.tabbar-bg: 80
