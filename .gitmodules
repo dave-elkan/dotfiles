@@ -1,0 +1,6 @@
+[submodule ".vim/vendor/syntastic"]
+	path = .vim/vendor/syntastic
+	url = git@github.com:baz/syntastic.git
+[submodule ".vim/vendor/cocoa.vim"]
+	path = .vim/vendor/cocoa.vim
+	url = git@github.com:baz/cocoa.vim.git
