@@ -2,6 +2,9 @@ export PS1="\[\e[0;35m\]\u\[\e[m\]@\[\e[0;33m\]\h\[\e[m\]:\w \[\e[0;31m\][\!:\j]
 export PATH=/usr/local/homebrew/bin:/Users/Basil/.gem/ruby/1.8/bin:/Users/Basil/Development/_Scripts:/Developer/usr/bin:$PATH
 export EDITOR=vim
 
+# Git bash completion
+source /usr/local/git/contrib/completion/git-completion.bash
+
 set -o vi
 
 # Terminal title
