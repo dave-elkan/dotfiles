@@ -40,6 +40,12 @@ set ttyfast
 set hidden
 set history=1000
 set t_Co=256
+set directory=~/.vim/tmp
+set backup
+set backupdir=~/.vim/backup
+set laststatus=2
+set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+set wildignore+=*.o,*.obj,*.pyc,*.DS_Store,*.db"
 
 " Restore size of vim window when restoring session
 set sessionoptions+=resize
