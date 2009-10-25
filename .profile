@@ -1,9 +1,13 @@
 export PS1="\[\e[0;35m\]\u\[\e[m\]@\[\e[0;33m\]\h\[\e[m\]:\w \[\e[0;31m\][\!:\j]\[\e[m\]$ "
-export PATH=/usr/local/homebrew/bin:/Users/Basil/.gem/ruby/1.8/bin:/Users/Basil/Development/_Scripts:/Developer/usr/bin:$PATH
+export PATH=/usr/local/homebrew/bin:/Users/Basil/.gem/bin:/Users/Basil/Development/_Scripts:/Developer/usr/bin:$PATH
 export EDITOR=vim
 
 # Git bash completion
 source /usr/local/git/contrib/completion/git-completion.bash
+
+# Keep Ruby gems in home path
+export GEM_HOME=$HOME/.gem
+export GEM_PATH=$HOME/.gem:/usr/lib/ruby/gems1.8
 
 set -o vi
 

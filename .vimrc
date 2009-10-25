@@ -80,13 +80,13 @@ let g:alternateExtensions_h = "m"
 let g:fuzzy_roots = ['/Users/Basil/Development/']
 
 " Syntastic options
-let g:syntastic_enable_signs=1
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-" Objective-C frameworks for Syntastic
-let g:syntastic_objc_frameworks = ['/Users/Basil/Development/_Libraries/BWToolkit']
+"let g:syntastic_enable_signs=1
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"
+"" Objective-C frameworks for Syntastic
+"let g:syntastic_objc_frameworks = ['/Users/Basil/Development/_Libraries/BWToolkit']
 
 " Syntastic toggle location-list
 map <silent> <leader>e :Errors<CR>

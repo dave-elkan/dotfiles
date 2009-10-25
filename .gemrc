@@ -1,0 +1,12 @@
+--- 
+gempath: 
+- /Users/Basil/.gem
+:update_sources: true
+:bulk_threshold: 1000
+:verbose: true
+:backtrace: false
+gemhome: /Users/Basil/.gem
+:benchmark: false
+:sources: 
+- http://gems.rubyforge.org/
+- http://gemcutter.org
