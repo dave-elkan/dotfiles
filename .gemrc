@@ -1,6 +1,6 @@
 --- 
 gempath: 
-- /Users/Basil/.gem
+- ~/.gem
 :update_sources: true
 :bulk_threshold: 1000
 :verbose: true
