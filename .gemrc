@@ -5,7 +5,6 @@ gempath:
 :bulk_threshold: 1000
 :verbose: true
 :backtrace: false
-gemhome: /Users/Basil/.gem
 :benchmark: false
 :sources: 
 - http://gems.rubyforge.org/
