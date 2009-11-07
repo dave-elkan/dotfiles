@@ -1,9 +1,9 @@
-export PS1="\[\e[0;35m\]\u\[\e[m\]@\[\e[0;33m\]\h\[\e[m\]:\w \[\e[0;31m\][\!:\j]\[\e[m\]$ "
 export PATH=/usr/local/homebrew/bin:~/.gem/bin:/Developer/usr/bin:$PATH
 export EDITOR=vim
 
 # Git bash completion
 source /usr/local/git/contrib/completion/git-completion.bash
+export PS1="\[\e[0;35m\]\u\[\e[m\]@\[\e[0;33m\]\h\[\e[m\]:\w "'\[\033[1;34m\]$(__git_ps1 "[%s]")'"\[\e[0;31m\][\!:\j]\[\e[m\]$ "
 
 # Keep Ruby gems in home path
 export GEM_HOME=$HOME/.gem
