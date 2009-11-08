@@ -1,3 +1,6 @@
 [submodule ".vim/vendor/cocoa.vim"]
 	path = .vim/vendor/cocoa.vim
 	url = git@github.com:baz/cocoa.vim.git
+[submodule ".vim/vendor/vcscommand"]
+	path = .vim/vendor/vcscommand
+	url = git://repo.or.cz/vcscommand
