@@ -78,6 +78,8 @@ let g:alternateExtensions_h = "m"
 
 " FuzzyFinderTextMate
 let g:fuzzy_roots = ['~/Development/']
+let g:fuzzy_ignore = "*.o,build/*"
+let g:fuzzy_ceiling = 100000
 
 " Syntastic toggle location-list
 map <silent> <leader>e :Errors<CR>
