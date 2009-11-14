@@ -1,4 +1,4 @@
-export PATH=/usr/local/homebrew/bin:~/.gem/bin:/Developer/usr/bin:$PATH
+export PATH=/usr/local/homebrew/bin:~/.gem/bin:/Developer/usr/bin:~/Development/_Scripts:$PATH
 export EDITOR=vim
 
 # Git bash completion
