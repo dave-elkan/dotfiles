@@ -46,6 +46,8 @@ set backupdir=~/.vim/backup
 set laststatus=2
 set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 set wildignore+=*.o,*.obj,*.pyc,*.DS_Store,*.db"
+filetype indent on
+filetype plugin on
 
 " Restore size of vim window when restoring session
 set sessionoptions+=resize
@@ -60,14 +62,6 @@ nmap <silent> <leader>s :set nolist!<CR>
 " Turn spell checking on for .txt files
 au BufRead,BufNewFile *.txt		setlocal spell spelllang=en_au
 
-" LaTeX
-au BufRead,BufNewFile *.tex		set wrap | set textwidth=110 | set nonu
-au BufLeave,BufUnload *.tex		set nowrap | set textwidth=0 | set nu
-" mapping for wordcount
-nnoremap <silent> <Leader>w :!/usr/texbin/detex % \| wc -w<CR>
-filetype indent on
-filetype plugin on
-
 map <F3> :let @/=""<CR>
 map <F4> :FuzzyFinderTextMate<CR>
 map <F5> :ruby finder.rescan!<CR>
@@ -80,6 +74,3 @@ let g:alternateExtensions_h = "m"
 let g:fuzzy_roots = ['~/Development/']
 let g:fuzzy_ignore = "*.o,build/*,*.png,*.tiff,*.tif,*.jpg,*.jpeg,*.ico,*.icns,*.pyc,*.pdf"
 let g:fuzzy_ceiling = 100000
-
-" Syntastic toggle location-list
-map <silent> <leader>e :Errors<CR>
