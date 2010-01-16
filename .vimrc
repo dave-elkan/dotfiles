@@ -62,6 +62,9 @@ nmap <silent> <leader>s :set nolist!<CR>
 " Turn spell checking on for .txt files
 au BufRead,BufNewFile *.txt		setlocal spell spelllang=en_au
 
+" Objective-J filetype detection
+au BufNewFile,BufRead *.j setf objj
+
 map <F3> :let @/=""<CR>
 map <F4> :FuzzyFinderTextMate<CR>
 map <F5> :ruby finder.rescan!<CR>
