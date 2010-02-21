@@ -1,0 +1,1 @@
+../vendor/vimclojure/autoload/vimclojure.vim

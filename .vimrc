@@ -57,7 +57,7 @@ set gcr=n:blinkon0
 
 " Catch trailing whitespace
 set listchars=tab:>-,trail:·,eol:$
-nmap <silent> <leader>s :set nolist!<CR>
+nmap <silent> <leader>f :set nolist!<CR>
 
 " Turn spell checking on for .txt files
 au BufRead,BufNewFile *.txt		setlocal spell spelllang=en_au
@@ -77,3 +77,10 @@ let g:alternateExtensions_h = "m"
 let g:fuzzy_roots = ['~/Development/']
 let g:fuzzy_ignore = "*.o,build/*,*.png,*.tiff,*.tif,*.jpg,*.jpeg,*.ico,*.icns,*.pyc,*.pdf"
 let g:fuzzy_ceiling = 100000
+
+" VimClojure
+let vimclojure#NailgunClient = '~/.vim/vendor/vimclojure/bin/ng'
+let clj_want_gorilla = 1
+let clj_highlight_builtins = 1
+let clj_highlight_contrib = 1
+let clj_paren_rainbow = 1
