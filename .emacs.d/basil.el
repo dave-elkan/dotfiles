@@ -1,5 +1,6 @@
 ;; Vendor directory contains adhoc scripts
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
+(add-to-list 'exec-path "/usr/local/homebrew/bin")
 
 ;; Shows a minimap of the current buffer
 (require 'minimap)
@@ -116,3 +117,17 @@
 
 ;; Anything - Quicksilver for Emacs
 (require 'anything-config)
+
+;; Org
+(require 'org-install)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+
+;; Visual line mode and FlySpell for Org-Mode
+(setq ispell-program-name "aspell")
+(add-hook 'org-mode-hook
+	(lambda()
+		(visual-line-mode 1)
+		(flyspell-mode 1)))
