@@ -1,6 +1,6 @@
 ;; Vendor directory contains adhoc scripts
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
-(add-to-list 'exec-path "/usr/local/homebrew/bin")
+(add-to-list 'exec-path "/usr/local/bin")
 
 ;; Shows a minimap of the current buffer
 (require 'minimap)
