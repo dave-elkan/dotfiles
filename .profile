@@ -1,4 +1,4 @@
-export PATH=/usr/local/homebrew/bin:~/.gem/bin:/Developer/usr/bin:~/Development/_Scripts:$PATH
+export PATH=~/.gem/bin:/Developer/usr/bin:~/Development/_Scripts:$PATH
 export EDITOR=vim
 export CLASSPATH=$(find ${HOME}/Development/_Libraries/Clojure -type f | tr '\n' ':' | sed 's/:$//'):$CLASSPATH
 
