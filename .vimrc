@@ -66,17 +66,15 @@ au BufRead,BufNewFile *.txt		setlocal spell spelllang=en_au
 au BufNewFile,BufRead *.j setf objj
 
 map <F3> :let @/=""<CR>
-map <F4> :FuzzyFinderTextMate<CR>
-map <F5> :ruby finder.rescan!<CR>
+map <F4> :CommandTFlush<CR>
 
 " A - header switching plugin
 let g:alternateExtensions_m = "h"
 let g:alternateExtensions_h = "m"
 
-" FuzzyFinderTextMate
-let g:fuzzy_roots = ['~/Development/']
-let g:fuzzy_ignore = "*.o,build/*,*.png,*.tiff,*.tif,*.jpg,*.jpeg,*.ico,*.icns,*.pyc,*.pdf"
-let g:fuzzy_ceiling = 100000
+" Command-T
+let g:CommandTMaxFiles=1000000
+cd ~/Development
 
 " VimClojure
 let vimclojure#NailgunClient = '~/.vim/vendor/vimclojure/bin/ng'
