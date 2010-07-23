@@ -4,3 +4,6 @@
 [submodule ".vim/vendor/vcscommand"]
 	path = .vim/vendor/vcscommand
 	url = git://repo.or.cz/vcscommand
+[submodule ".vim/vendor/Command-T"]
+	path = .vim/vendor/Command-T
+	url = http://github.com/wincent/Command-T.git
