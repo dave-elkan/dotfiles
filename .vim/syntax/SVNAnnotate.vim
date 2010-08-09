@@ -1,1 +1,0 @@
-../vendor/vcscommand/syntax/SVNAnnotate.vim

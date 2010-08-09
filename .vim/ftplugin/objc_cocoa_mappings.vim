@@ -1,1 +1,0 @@
-../vendor/cocoa.vim/ftplugin/objc_cocoa_mappings.vim

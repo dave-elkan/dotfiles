@@ -1,1 +1,0 @@
-../vendor/vimclojure/syntax/clojure.vim

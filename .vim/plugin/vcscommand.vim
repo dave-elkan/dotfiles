@@ -1,1 +1,0 @@
-../vendor/vcscommand/plugin/vcscommand.vim

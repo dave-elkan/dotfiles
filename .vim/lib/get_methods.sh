@@ -1,1 +1,0 @@
-../vendor/cocoa.vim/lib/get_methods.sh

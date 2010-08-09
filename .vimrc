@@ -1,3 +1,8 @@
+" Pathogen
+filetype off 
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+
 if exists("&anti")
 	set anti
 endif
@@ -62,9 +67,6 @@ nmap <silent> <leader>f :set nolist!<CR>
 " Turn spell checking on for .txt files
 au BufRead,BufNewFile *.txt		setlocal spell spelllang=en_au
 
-" Objective-J filetype detection
-au BufNewFile,BufRead *.j setf objj
-
 map <F3> :let @/=""<CR>
 map <F4> :CommandTFlush<CR>
 
@@ -75,10 +77,3 @@ let g:alternateExtensions_h = "m"
 " Command-T
 let g:CommandTMaxFiles=1000000
 cd ~/Development
-
-" VimClojure
-let vimclojure#NailgunClient = '~/.vim/vendor/vimclojure/bin/ng'
-let clj_want_gorilla = 1
-let clj_highlight_builtins = 1
-let clj_highlight_contrib = 1
-let clj_paren_rainbow = 1
