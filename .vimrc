@@ -49,7 +49,7 @@ set directory=~/.vim/tmp
 set backup
 set backupdir=~/.vim/backup
 set laststatus=2
-set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]%{fugitive#statusline()}
 set wildignore+=*.o,*.obj,*.pyc,*.DS_Store,*.db"
 filetype indent on
 filetype plugin on
