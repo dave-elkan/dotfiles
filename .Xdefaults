@@ -1,15 +1,9 @@
 URxvt.cursorBlink: true
-URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=14
-URxvt.boldFont: xft:Bitstream Vera Sans Mono:pixelsize=14:style=Bold
+URxvt.font: xft:Monaco:pixelsize=14
+URxvt.boldFont: xft:Monaco:pixelsize=14:style=Bold
 URxvt.termName: xterm-256color
-URxvt.perl-ext-common: default,tabbed
-URxvt.tabbed.tabbar-fg: 60
-URxvt.tabbed.tabbar-bg: 80
-URxvt.tabbed.tab-fg: 59
-URxvt.tabbed.tab-bg: 80
-
-URxvt*background: #333333
-URxvt*foreground: #DDDDDD
+URxvt*background: #151515
+URxvt*foreground: #F1F1F1
 URxvt*color0: #4D4D4D
 URxvt*color1: #AA6D3D
 URxvt*color2: #23C37A
@@ -21,24 +15,7 @@ URxvt*color12: #235CD6
 URxvt*color14: #FFD700
 URxvt*color15: #F8A849
 URxvt.cursorColor: #096EE9
-
-URxvt.saveLines:		10000
-
-URxvt.scrollBar:		false
-URxvt.secondaryScroll:  true
-URxvt.secondaryScreen:  true
-
-# This is for my 30"
-URxvt.geometry:	150x80
-# This is for my laptop's 17"
-#URxvt.geometry:		150x40
-
-# To stop xterm from starting up with X11.app type the following:
-# defaults write org.x.X11 app_to_run /opt/local/bin/urxvt
-# OR you could set it to nothing using:
-# defaults write org.x.X11 app_to_run /usr/bin/true
-#
-# Also to disable the menubar whilst in X11.app add the following
-# children to the root node of the Info.plist in X11.app/Contents:
-#	<key>LSUIPresentationMode</key>
-#	<integer>4</integer>
+URxvt.saveLines: 10000
+URxvt.scrollBar: false
+URxvt.secondaryScroll: true
+URxvt.secondaryScreen: true
