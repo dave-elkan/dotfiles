@@ -39,3 +39,4 @@ fi
 # aliases
 alias sshom='ssh bshkara_om@ssh.phx.nearlyfreespeech.net'
 alias sshrepo='ssh bshkara_omrepo@ssh.phx.nearlyfreespeech.net'
+alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
