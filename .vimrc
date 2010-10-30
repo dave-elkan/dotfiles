@@ -69,6 +69,7 @@ au BufRead,BufNewFile *.txt		setlocal spell spelllang=en_au
 
 map <F3> :let @/=""<CR>
 map <F4> :CommandTFlush<CR>
+nnoremap <F5> :GundoToggle<CR>
 
 " A - header switching plugin
 let g:alternateExtensions_m = "h"
