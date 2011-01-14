@@ -76,8 +76,10 @@ let g:alternateExtensions_m = "h"
 let g:alternateExtensions_h = "m"
 
 " Command-T
-let g:CommandTMaxFiles=1000000
+let g:CommandTMaxFiles = 100000
+let g:CommandTMaxDepth = 5
 cd ~/Development
+nmap <silent> <Leader>t :CommandT<CR>
 
 " Bindings so Vim inside of Tmux works.
 map [5C <Right>
