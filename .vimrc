@@ -10,7 +10,7 @@ set ff=unix
 if has("gui_running")
 	" width/height
 	set lines=80
-	set columns=200
+	set columns=225
 	set guifont=Monaco:h14
 	set guioptions-=T
 	set fuoptions=maxvert,maxhorz
