@@ -77,7 +77,7 @@ let g:alternateExtensions_h = "m"
 
 " Command-T
 let g:CommandTMaxFiles = 100000
-let g:CommandTMaxDepth = 5
+let g:CommandTMaxDepth = 8
 cd ~/Development
 nmap <silent> <Leader>t :CommandT<CR>
 
