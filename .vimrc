@@ -164,3 +164,7 @@ function! DoPrettyXML()
 	exe "set ft=" . l:origft
 endfunction
 command! PrettyXML call DoPrettyXML()
+
+let g:alternateExtensions_h = "c,m,cc,mm"
+let g:alternateExtensions_cc = "h"
+let g:alternateExtensions_mm = "h"
