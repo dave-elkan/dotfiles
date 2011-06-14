@@ -19,9 +19,9 @@
 [submodule ".vim/bundle/gundo"]
 	path = .vim/bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
-[submodule ".vim/bundle/clang_complete"]
-	path = .vim/bundle/clang_complete
-	url = http://github.com/Rip-Rip/clang_complete.git
 [submodule ".vim/bundle/conque"]
 	path = .vim/bundle/conque
 	url = https://github.com/rson/vim-conque.git
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git

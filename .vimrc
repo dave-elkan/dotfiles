@@ -1,7 +1,7 @@
 " Pathogen
 filetype off 
-call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 if exists("&anti")
 	set anti
@@ -10,7 +10,7 @@ set ff=unix
 if has("gui_running")
 	" width/height
 	set lines=80
-	set columns=225
+	set columns=260
 	set guifont=Monaco:h14
 	set guioptions-=T
 	set fuoptions=maxvert,maxhorz
@@ -79,7 +79,7 @@ let g:alternateExtensions_h = "m"
 let g:CommandTMaxFiles = 100000
 let g:CommandTMaxDepth = 8
 cd ~/Development
-nmap <silent> <Leader>t :CommandT<CR>
+nmap <silent> <leader>t :CommandT<CR>
 
 " Bindings so Vim inside of Tmux works.
 map [5C <Right>
@@ -168,3 +168,9 @@ command! PrettyXML call DoPrettyXML()
 let g:alternateExtensions_h = "c,m,cc,mm"
 let g:alternateExtensions_cc = "h"
 let g:alternateExtensions_mm = "h"
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_enable_signs=1
