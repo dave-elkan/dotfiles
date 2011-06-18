@@ -174,3 +174,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_enable_signs=1
+
+" Clang Complete
+let g:clang_complete_copen = 1
+let g:clang_user_options = '-fblocks'
