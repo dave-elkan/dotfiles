@@ -1,7 +1,7 @@
 " Pathogen
 filetype off 
-call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 if exists("&anti")
 	set anti
@@ -10,7 +10,7 @@ set ff=unix
 if has("gui_running")
 	" width/height
 	set lines=80
-	set columns=200
+	set columns=260
 	set guifont=Monaco:h14
 	set guioptions-=T
 	set fuoptions=maxvert,maxhorz
@@ -77,7 +77,7 @@ let g:alternateExtensions_h = "m"
 
 " Command-T
 let g:CommandTMaxFiles = 100000
-let g:CommandTMaxDepth = 5
+let g:CommandTMaxDepth = 8
 cd ~/Code
 nmap <silent> <Leader>t :CommandT<CR>
 
@@ -100,6 +100,40 @@ function! QFixToggle(forced)
 	endif
 endfunction
 nmap <silent> \\ :QFix<CR>
+
+" Tell vim to remember certain things when we exit
+" "  '10 : marks will be remembered for up to 10 previously edited files
+" "  "100 : will save up to 100 lines for each register
+" "  :20 : up to 20 lines of command-line history will be remembered
+" "  % : saves and restores the buffer list
+" "  n... : where to save the viminfo files
+set viminfo='10,\"100,:20,%,n~/.viminfo
+
+" When we reload, tell vim to restore the cursor to the saved position
+augroup JumpCursorOnEdit
+ au!
+ autocmd BufReadPost *
+ \ if expand("<afile>:p:h") !=? $TEMP |
+ \ if line("'\"") > 1 && line("'\"") <= line("$") |
+ \ let JumpCursorOnEdit_foo = line("'\"") |
+ \ let b:doopenfold = 1 |
+ \ if (foldlevel(JumpCursorOnEdit_foo) > foldlevel(JumpCursorOnEdit_foo - 1)) |
+ \ let JumpCursorOnEdit_foo = JumpCursorOnEdit_foo - 1 |
+ \ let b:doopenfold = 2 |
+ \ endif |
+ \ exe JumpCursorOnEdit_foo |
+ \ endif |
+ \ endif
+ " Need to postpone using "zv" until after reading the modelines.
+ autocmd BufWinEnter *
+ \ if exists("b:doopenfold") |
+ \ exe "normal zv" |
+ \ if(b:doopenfold > 1) |
+ \ exe "+".1 |
+ \ endif |
+ \ unlet b:doopenfold |
+ \ endif
+augroup END
 
 " From http://vim.wikia.com/wiki/Pretty-formatting_XML
 function! DoPrettyXML()
@@ -130,3 +164,17 @@ function! DoPrettyXML()
 	exe "set ft=" . l:origft
 endfunction
 command! PrettyXML call DoPrettyXML()
+
+let g:alternateExtensions_h = "c,m,cc,mm"
+let g:alternateExtensions_cc = "h"
+let g:alternateExtensions_mm = "h"
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_enable_signs=1
+
+" Clang Complete
+let g:clang_complete_copen = 1
+let g:clang_user_options = '-fblocks'
