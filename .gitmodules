@@ -1,9 +1,6 @@
 [submodule ".vim/vendor/Command-T"]
 	path = .vim/vendor/Command-T
 	url = http://github.com/wincent/Command-T.git
-[submodule ".vim/bundle/cocoa.vim"]
-	path = .vim/bundle/cocoa.vim
-	url = git@github.com:baz/cocoa.vim.git
 [submodule ".vim/bundle/fugitive"]
 	path = .vim/bundle/fugitive
 	url = http://github.com/tpope/vim-fugitive.git
@@ -31,3 +28,12 @@
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/vim-javascript"]
+	path = .vim/bundle/vim-javascript
+	url = git://github.com/pangloss/vim-javascript.git
+[submodule ".vim/bundle/solarized"]
+	path = .vim/bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule ".vim/bundle/powerline"]
+	path = .vim/bundle/powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
